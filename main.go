@@ -18,6 +18,11 @@ In how many ways can twenty 12-sided dice (sides numbered 1 to 12) be rolled so 
 
 package main
 
+import "fmt"
+
 func main() {
-	return
+	// for now just generate a roll
+	// empty set of die
+	roll := make([]int, 20)
+	fmt.Println(roll)
 }
