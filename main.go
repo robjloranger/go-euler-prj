@@ -1,28 +1,26 @@
 // Project for golang training
 
-// Top Dice, Problem # 240 from ProjectEuler
-// https://projecteuler.net/problem=240
+// Multiples of three and five, Problem # 1 from ProjectEuler
+// https://projecteuler.net/problem=1
 
 /*
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
-There are 1111 ways in which five 6-sided dice (sides numbered 1 to 6) can be rolled so that the top three sum to 15. Some examples are:
-
-D1,D2,D3,D4,D5 = 4,3,6,3,5
-D1,D2,D3,D4,D5 = 4,3,3,5,6
-D1,D2,D3,D4,D5 = 3,3,3,6,6
-D1,D2,D3,D4,D5 = 6,6,3,3,3
-
-In how many ways can twenty 12-sided dice (sides numbered 1 to 12) be rolled so that the top ten sum to 70?
-
+Find the sum of all the multiples of 3 or 5 below 1000.
 */
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	// for now just generate a roll
-	// empty set of die
-	roll := make([]int, 20)
-	fmt.Println(roll)
+	var sum int
+	for x := 0; x < 1000; x++ {
+		if x%3 == 0 || x%5 == 0 {
+			sum += x
+		}
+	}
+	fmt.Println(sum)
 }
